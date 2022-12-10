@@ -10,3 +10,9 @@
 
 
 
+
+###  social schen 제작
+
+- https://sean.interactive-machines.com/docs/architecture/
+
+
