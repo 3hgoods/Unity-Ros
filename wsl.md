@@ -3,6 +3,9 @@
 ### install - old
 - https://engpro.tistory.com/49
 
+### install - basic command 
+https://learn.microsoft.com/ko-kr/windows/wsl/basic-commands
+
 ### install with wsl command
 
 ```
