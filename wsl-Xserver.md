@@ -7,3 +7,6 @@
 
 - gui 설치및 셋팅이 필요함.
 - 
+- ros 설치시에도 같은 이슈
+- https://doljokilab.tistory.com/6
+
