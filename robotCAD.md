@@ -7,6 +7,6 @@
  - 
 
 
-### Solidsorks 에서(URDF)  unity 까지
+### Solidsorks 에서(URDF)  ROS 까지
 
 - https://www.youtube.com/watch?v=anMymsvJKJI
