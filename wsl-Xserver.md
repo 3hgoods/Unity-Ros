@@ -10,3 +10,8 @@
 - ros 설치시에도 같은 이슈
 - https://doljokilab.tistory.com/6
 
+
+
+- bash 셋팅필요
+- https://fossa.tistory.com/6
+
