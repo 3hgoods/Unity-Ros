@@ -13,7 +13,7 @@
 
 
 ### 강의2 드론
-
+- https://wiki.ros.org/ko/ROS/Tutorials
 - https://www.youtube.com/watch?v=SH__g7nHn6o
 
 
