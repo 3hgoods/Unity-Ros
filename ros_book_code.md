@@ -9,3 +9,7 @@
 - git clone https://github.com/PX4/PX4-Autopilot.git --recursive
  
 - git submodule update --init --recursive
+
+
+
+-   install ros-noetic-mavros-msgs
