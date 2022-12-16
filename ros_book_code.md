@@ -32,6 +32,16 @@
 
 -
 -
+### 2.--> mavros 설치   ref https://robonote.tistory.com/14
+```
+- sudo apt-get install ros-noetic-mavros ros-noetic-mavros-extras
+- roslaunch mavros px4.launch fcu_url:="udp://:14540@127.0.0.1:14557"
+
+
+- h2@DESKTOP-5OM6HUE:~/catkin_ws/src/Firmware/launch$ roslaunch mavros px4.launch fcu_url:="udp://:14540@127.0.0.1:14557"
+
+```
+
 
 
 
