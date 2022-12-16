@@ -13,3 +13,7 @@
 
 
 -   install ros-noetic-mavros-msgs
+
+- https://dnddnjs.gitbooks.io/drone-autonomous-flight/content/mavrosc640_px4_c124_ce58.html
+
+
