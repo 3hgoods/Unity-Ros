@@ -27,6 +27,11 @@
 -설치방법
 - https://www.cku.ac.kr/result/bbs/535/159076_1_1601000218752.files/00003.xhtml
 
+- 설치방법 qground
+- https://docs.qgroundcontrol.com/master/ko/getting_started/download_and_install.html
+
+-
+-
 
 
 
