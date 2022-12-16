@@ -5,3 +5,7 @@
 
 - https://www.youtube.com/watch?v=ms1kogn8AWI
 
+### 8장
+- git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+ 
+- git submodule update --init --recursive
