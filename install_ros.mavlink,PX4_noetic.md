@@ -135,7 +135,7 @@ bash ./PX4-Autopilot/Tools/setup/ubuntu.sh   #  이 부분 대체할 것. 아래
 ```
 ERROR: pandas 1.5.2 has requirement numpy>=1.20.3; python_version < "3.10", but you'll have numpy 1.17.4 which is incompatible.
 ```
-- 교재 이용(ROS 로보틱스프로그래밍
+- 교재 이용(ROS 로보틱스프로그래밍, 
 ```
 sudo apt install python3-pip
 
@@ -159,6 +159,12 @@ sudo apt install libgstreamer-plugins-base1.0-dev
 pip3 install --user jinja2
 
 ```
+
+- 대체 애매, Relogin or reboot computer before attempting to build NuttX targets
+```
+ 리부팅 대신 터미널 닫고 새로 열기로 대체 
+```
+
 
 
 
