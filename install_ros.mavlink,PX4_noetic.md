@@ -217,8 +217,10 @@ make px4_sitl list_vmd_make_targets | grep gazebo
 확인중..
 https://swiftcam.tistory.com/604
 https://swiftcam.tistory.com/605
-
-
+make px4_sitl_default
+https://docs.px4.io/main/en/simulation/gazebo.html
+cd /path/to/PX4-Autopilot
+make px4_sitl gazebo
 
 ```
 
