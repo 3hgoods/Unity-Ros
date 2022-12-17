@@ -33,8 +33,28 @@ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/inst
 sudo bash ./install_geographiclib_datasets.sh 
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
-catkin init                              # 해결방법1  참조할 것것
+catkin init                              # 해결방법1  참조할 것
+wstool init src
+
+rosinstall_generator --rosdistro noetic mavlink | tee /tmp/mavros.rosinstall  #처음에 안 먹었으나 python3패키지 설치후 작동 (참조)
+rosinstall_generator --upstream mavros | tee -a /tmp/mavros.rosinstall
+wstool merge -t src /tmp/mavros.rosinstall
+wstool update -t src
+rosdep install --from-paths src --ignore-src --rosdistro noetic -y --os ubuntu:focal
+wstool merge -t src /tmp/mavros.rosinstall
+sudo apt install geographiclib-tools -y
+echo "Downloading dependent script 'install_geographiclib_datasets.sh'"
+install_geo=$(wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh -O -)
+wget_return_code=$?
+sudo bash -c "$install_geo"
+catkin build
+
 ```
+
+- 참조1 https://velog.io/@jdja2004/SITL-%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95
+
+
+
 
 - error1 : catkin: command not found
 ```
@@ -62,7 +82,7 @@ The following packages have unmet dependencies:
 E: Unable to correct problems, you have held broken packages.
 
 
-``
+```
 
 - 해결방법1 https://pinkwink.kr/1337
 ```
@@ -71,6 +91,33 @@ sudo apt install python3-osrf-pycommo
 sudo apt insall python3-catkin-tools    #  python-noetic-tools은 아님.
 catkin init
 catkin build                            # 소스가 없어서 테스트로 사용
+
+```
+
+- error 2  python-rosinstall-generator   python2 버전이 오래되어 지원이 끊긴거 같음. 
+```
+h1@h1:~/catkin_ws$ sudo apt-get install python-catkin-tools python-rosinstall-generator -y
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Package python-rosinstall-generator is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+However the following packages replace it:
+  python3-rosinstall-generator
+
+Package python-catkin-tools is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'python-catkin-tools' has no installation candidate
+E: Package 'python-rosinstall-generator' has no installation candidate
+
+```
+
+- 해결방법2 
+```
+sudo apt install python3-rosinstall-generator
 
 ```
 
