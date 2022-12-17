@@ -166,6 +166,19 @@ pip3 install --user jinja2
 ```
 
 
+### 설치 정리
+- https://swiftcam.tistory.com/407
+
+```
+
+
+
+
+```
+
+
+
+
 
 
 
