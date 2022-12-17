@@ -170,7 +170,53 @@ pip3 install --user jinja2
 - https://swiftcam.tistory.com/407
 
 ```
+1) mavros 설치 sudo apt install ros-noetic-mavros
+2) georaphiclib 데이터 설치 
+wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+sudo bash ./install_geographiclib_datasets.sh 
+3) 필수 유틸리티 설치
+sudo apt instal python3-pip
+pip3 install --user numpy
+pip3 install --user empy
+pip3 install --user toml
+pip3 install --user jinja2
+pip3 install --user packaging
 
+4) catkin_tools 설치
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt insall python3-catkin-tools 
+sudo apt install python3-osrf-pycommo
+
+5) catkin 초기화
+catkin init
+wstool init src
+
+6) PX4 펌웨어 다운로드 및 컴파일
+git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+
+7) catkim_make로 PX4 펌웨어 및 예제 프로그램 컴파일
+cd ~/catkin_ws/
+catkin build    (or catkin_make 둘중 하나 선택하면 혼용해서 사용X)
+
+8) SITL 환경설정
+source ~/catkin_ws/src/PX4-Autopilot/Tools/setup_gazebo.bash
+source ~/catkin_ws/src/PX-Autopilot/build/pix4_sitl_default
+export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/
+export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/Tools/sitl_gazebo
+
+
+
+9) SITL 예제 컴파일/실행
+cd ~/catkin_ws/src/PX-Autopilot
+make px4_sitl list_vmd_make_targets | grep gazebo
+
+make px4_sitl list_vmd_make_targets | grep gazebo
+
+
+확인중..
+https://swiftcam.tistory.com/604
+https://swiftcam.tistory.com/605
 
 
 
