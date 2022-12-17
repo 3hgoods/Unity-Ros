@@ -36,5 +36,12 @@ cd ~/catkin_ws
 catkin init
 ```
 
+- error1 : catkin: command not found
+```
+h1@h1:~/catkin_ws$ catkin init
+catkin: command not found
+
+``
+
 
 
