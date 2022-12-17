@@ -128,9 +128,42 @@ sudo apt install python3-rosinstall-generator
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/PX4/PX4-Autopilot.git --recursive
-bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+bash ./PX4-Autopilot/Tools/setup/ubuntu.sh   #  이 부분 대체할 것. 아래 부분 업그레이드 진행하고 실행
 
 ```
+- 설치과정중 경고 , 에러
+```
+ERROR: pandas 1.5.2 has requirement numpy>=1.20.3; python_version < "3.10", but you'll have numpy 1.17.4 which is incompatible.
+```
+- 교재 이용(ROS 로보틱스프로그래밍
+```
+sudo apt install python3-pip
+
+pip3 install --user numpy
+Requirement already satisfied: numpy in /usr/lib/python3/dist-packages (1.17.4)
+
+pip3 install --upgrade numpy
+Collecting numpy
+  Downloading numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+     |████████████████████████████████| 17.1 MB 6.9 MB/s
+Installing collected packages: numpy
+  WARNING: The scripts f2py, f2py3 and f2py3.8 are installed in '/home/h1/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed numpy-1.23.5
+
+pip3 install --user empy
+pip3 install --user toml
+pip3 install --user packaging
+sudo apt install libgstreamer-plugins-base1.0-dev
+
+pip3 install --user jinja2
+
+```
+
+
+
+
+
 
 
 
