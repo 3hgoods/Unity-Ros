@@ -23,7 +23,7 @@ rosdep update
 
 
 
-### ubuntu 20.04 - install_mavlink 
+### ubuntu 20.04 - install_mavlink mavros
 
 - https://docs.px4.io/main/en/ros/mavros_installation.html
 
@@ -36,7 +36,7 @@ cd ~/catkin_ws
 catkin init                              # 해결방법1  참조할 것
 wstool init src
 
-rosinstall_generator --rosdistro noetic mavlink | tee /tmp/mavros.rosinstall  #처음에 안 먹었으나 python3패키지 설치후 작동 (참조)
+rosinstall_generator --rosdistro noetic mavlink | tee /tmp/mavros.rosinstall  #처음에 안 먹었으나 python3패키지 설치후 작동 (참조1)
 rosinstall_generator --upstream mavros | tee -a /tmp/mavros.rosinstall
 wstool merge -t src /tmp/mavros.rosinstall
 wstool update -t src
@@ -120,6 +120,22 @@ E: Package 'python-rosinstall-generator' has no installation candidate
 sudo apt install python3-rosinstall-generator
 
 ```
+
+### ubuntu 20.04 - install_PX4 Autopilot 설치
+- https://velog.io/@jdja2004/SITL-%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95
+- dd
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+
+```
+
+
+
+
+
 
 
 
