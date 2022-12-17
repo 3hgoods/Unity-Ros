@@ -205,7 +205,8 @@ source ~/catkin_ws/src/PX-Autopilot/build/pix4_sitl_default
 export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/
 export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/Tools/sitl_gazebo
 
-
+-출처1 https://robonote.tistory.com/22
+- source ~/catkin_ws/devel/setup.bash
 
 9) SITL 예제 컴파일/실행
 cd ~/catkin_ws/src/PX-Autopilot
