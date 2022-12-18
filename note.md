@@ -21,3 +21,38 @@
 - 픽스호크 ros 사용
 - https://e3jake.tistory.com/17
 - 
+
+- ros 가제보 자료생성 가능할 듯
+### tum_simulator
+- https://www.youtube.com/watch?v=XajgNfNJ1VI
+- https://github.com/jeremyfix/ros-and-unity/tree/master/DronePrefab
+
+- https://www.youtube.com/watch?v=HAojvLetHto
+- https://github.com/dougvk/tum_simulator
+- 
+
+- http://wiki.ros.org/tum_simulator
+
+
+### Multi-UAV-Simulator For Crazyflie 2.0 Nano-drone
+- https://github.com/malintha/multi_uav_simulator/tree/crazyflie
+- 
+
+
+### tum_simulator1
+-https://github.com/dougvk/tum_simulator/tree/master/cvg_sim_gazebo
+- https://www.youtube.com/watch?v=_wvSnTPduyg
+```
+
+cd ~/catkin_ws/
+source devel/setup.bash
+source /opt/ros/noetic/setup.bash
+
+roslaunch cvg_sim_gazebo ardrone_testworld.launch
+source ~/catkin_ws/devel/setup.bash
+
+
+```
+
+
+
