@@ -18,4 +18,6 @@
 - 제품구매 예정
 - https://docs.px4.io/v1.12/ko/assembly/quick_start_cuav_v5_plus.html
 
+- 픽스호크 ros 사용
+- https://e3jake.tistory.com/17
 - 
