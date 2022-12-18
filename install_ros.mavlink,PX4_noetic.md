@@ -198,6 +198,7 @@ git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 7) catkim_make로 PX4 펌웨어 및 예제 프로그램 컴파일
 cd ~/catkin_ws/
 catkin build    (or catkin_make 둘중 하나 선택하면 혼용해서 사용X)
+                (중요: PX-Autopilot , Firmware 두개를 다운로드하면 안됨, PX4 타켓이 같다고 진행이 안됨) 
 
 8) SITL 환경설정
 source ~/catkin_ws/src/PX4-Autopilot/Tools/setup_gazebo.bash
@@ -210,14 +211,7 @@ export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/Tools/sitl
 
 9) SITL 예제 컴파일/실행
 cd ~/catkin_ws/src/PX-Autopilot
-make px4_sitl list_vmd_make_targets | grep gazebo
-
-make px4_sitl list_vmd_make_targets | grep gazebo
-
-
-확인중..
-https://swiftcam.tistory.com/604
-https://swiftcam.tistory.com/605
+make px4_sitl gazebo
 
 cd /path/to/PX4-Autopilot
 make px4_sitl_default
@@ -225,8 +219,52 @@ make px4_sitl_default gazebo
 make px4_sitl gazebo  #Quadrotor
 
 참조 https://docs.px4.io/main/en/simulation/gazebo.html
- 
 
+- 사용가능한 버전확인
+make px4_sitl list_vmd_make_targets 
+make px4_sitl list_vmd_make_targets | grep gazebo
+
+
+10) ROS런칭을 위한 셋팅
+
+- gedit ~/.bashrc 실행 후 아래 문구를 추가하면 됨 
+alias cm='catkin_make'
+alias cb='catkin build'
+alias gb='gedit ~/.bashrc'
+source ~/catkin_ws/devel/setup.bash 
+
+source ~/catkin_ws/src/PX4-Autopilot/Tools/setup_gazebo.bash
+( 버전에 따라 PX4-Autopilot/Tools/simulation/gazebo/setup_gazebo.bash 위치에 있음)
+
+
+source ~/catkin_ws/src/PX-Autopilot/build/pix4_sitl_default
+export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/
+export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/Tools/sitl_gazebo
+
+export ROS_PACKAGE_PATH=~/catkin_ws/src:$ROS_PACKAGE_PATH
+
+11) mavros ROS런칭
+cd ~/catkin_ws/src/PX4-Autopilot/launch
+ ls
+mavros_posix_sitl.launch          posix_sitl.launch  single_vehicle_spawn.launch
+multi_uav_mavros_sitl.launch      pub_test.launch    single_vehicle_spawn_sdf.launch
+multi_uav_mavros_sitl_sdf.launch  px4.launch
+
+(처음 헷갈렸던 경로)
+cd ~/catkin_ws/src/mavros/mavros/launch
+ls
+apm.launch   apm_config.yaml       event_launcher.yaml    node.launch  px4_config.yaml
+apm2.launch  apm_pluginlists.yaml  mavlink_bridge.launch  px4.launch   px4_pluginlists.yaml
+
+
+roslaunch px4 mavros_posix_sitl.launch  
+
+```
+
+- 확인중..
+```
+https://swiftcam.tistory.com/604
+https://swiftcam.tistory.com/605
 ```
 
 
