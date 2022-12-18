@@ -11,6 +11,8 @@
 
 - https://scienceon.kisti.re.kr/commons/util/originalView.do?dbt=TRKO&cn=TRKO201800002253
 
+- 고성능 멀티콥터/프로펠러 복합형 드론
+- https://scienceon.kisti.re.kr/commons/util/originalView.do?dbt=TRKO&cn=TRKO201800002253
 
 ### matlab과 연동
 - https://kr.mathworks.com/help/robotics/ug/pick-and-place-workflow-in-unity-3d-using-ros.html 
@@ -75,4 +77,16 @@ source ~/catkin_ws/devel/setup.bash
 - https://e3jake.tistory.com/17
 
 
+### 기본연결 Pixhawk와 ROS
+- https://e3jake.tistory.com/17
+
+### 기본셋팅 - 드론만들기 gazebo
+- https://kwangpil.tistory.com/101
+- 
+
+
+### ros-sharp
+- https://www.youtube.com/watch?v=sup2Tdxt1ko
+- https://github.com/siemens/ros-sharp
+- 
 
