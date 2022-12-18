@@ -12,7 +12,8 @@
 - https://scienceon.kisti.re.kr/commons/util/originalView.do?dbt=TRKO&cn=TRKO201800002253
 
 
-- 
+### matlab과 연동
+- https://kr.mathworks.com/help/robotics/ug/pick-and-place-workflow-in-unity-3d-using-ros.html 
 
 
 - 제품구매 예정
