@@ -63,7 +63,12 @@ source ~/catkin_ws/devel/setup.bash
 
 ```
 
+###드론 전쟁 강화학습 예시
+- https://journal-home.s3.ap-northeast-2.amazonaws.com/site/2022s/abs/0859.pdf
+- 
 
-### 기본자료
+### 기본자료  컴패니언 컴 구현과정
 - https://e3jake.tistory.com/17
+
+
 
