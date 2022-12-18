@@ -65,6 +65,9 @@ source ~/catkin_ws/devel/setup.bash
 
 ###드론 전쟁 강화학습 예시
 - https://journal-home.s3.ap-northeast-2.amazonaws.com/site/2022s/abs/0859.pdf
+
+### 가상비행환경을 이용한 ADP/DL 기반 자율비행 멀티콥터 핵심기술 개발
+- https://scienceon.kisti.re.kr/commons/util/originalView.do?cn=TRKO202100009099&dbt=TRKO&rn=
 - 
 
 ### 기본자료  컴패니언 컴 구현과정
