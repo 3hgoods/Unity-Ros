@@ -13,3 +13,9 @@
 
 
 - 
+
+
+- 제품구매 예정
+- https://docs.px4.io/v1.12/ko/assembly/quick_start_cuav_v5_plus.html
+
+- 
