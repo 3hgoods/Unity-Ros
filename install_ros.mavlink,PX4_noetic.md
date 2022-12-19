@@ -202,6 +202,7 @@ catkin build    (or catkin_make 둘중 하나 선택하면 혼용해서 사용X)
 
 8) SITL 환경설정
 source ~/catkin_ws/src/PX4-Autopilot/Tools/setup_gazebo.bash
+(( 변화: ~/catkin_ws/src/PX4-Autopilot/Tools/simulation/gazebo/setup_gazebo.bash ))
 source ~/catkin_ws/src/PX-Autopilot/build/pix4_sitl_default
 export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/
 export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/Tools/sitl_gazebo
