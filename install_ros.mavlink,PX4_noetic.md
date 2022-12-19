@@ -87,8 +87,8 @@ E: Unable to correct problems, you have held broken packages.
 - 해결방법1 https://pinkwink.kr/1337
 ```
 sudo apt-get upgrade
-sudo apt install python3-osrf-pycommo
-sudo apt insall python3-catkin-tools    #  python-noetic-tools은 아님.
+sudo apt install python3-osrf-pycommon
+sudo apt install python3-catkin-tools    #  python-noetic-tools은 아님.
 catkin init
 catkin build                            # 소스가 없어서 테스트로 사용
 
