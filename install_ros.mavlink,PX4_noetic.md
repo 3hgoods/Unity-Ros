@@ -229,20 +229,18 @@ make px4_sitl list_vmd_make_targets | grep gazebo
 10) ROS런칭을 위한 셋팅
 
 - gedit ~/.bashrc 실행 후 아래 문구를 추가하면 됨 
-alias cm='catkin_make'
+
+alias cw='cd ~/catkin_ws'   
+alias cs='cd ~/catkin_ws/src'  
 alias cb='catkin build'
+alias cm='cd ~/catkin_ws && catkin build'  
 alias gb='gedit ~/.bashrc'
+
+source /opt/ros/noetic/setup.bash
 source ~/catkin_ws/devel/setup.bash 
-
 source ~/catkin_ws/src/PX4-Autopilot/Tools/setup_gazebo.bash
-( 버전에 따라 PX4-Autopilot/Tools/simulation/gazebo/setup_gazebo.bash 위치에 있음)
+( 버전에 따라 source ~/catkin_ws/src/PX4-Autopilot/Tools/simulation/gazebo/setup_gazebo.bash 위치에 있음)
 
-
-source ~/catkin_ws/src/PX-Autopilot/build/pix4_sitl_default
-export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/
-export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/Tools/sitl_gazebo
-
-export ROS_PACKAGE_PATH=~/catkin_ws/src:$ROS_PACKAGE_PATH
 
 11) mavros ROS런칭
 cd ~/catkin_ws/src/PX4-Autopilot/launch
@@ -257,6 +255,12 @@ ls
 apm.launch   apm_config.yaml       event_launcher.yaml    node.launch  px4_config.yaml
 apm2.launch  apm_pluginlists.yaml  mavlink_bridge.launch  px4.launch   px4_pluginlists.yaml
 
+
+- 
+source ~/catkin_ws/src/PX-Autopilot/build/pix4_sitl_default
+export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/
+export ROSPACKAGE_PATH=$ROS_PACKAGE_PATH:~/catkin_ws/src/PX-Autopilot/Tools/sitl_gazebo
+export ROS_PACKAGE_PATH=~/catkin_ws/src:$ROS_PACKAGE_PATH
 
 roslaunch px4 mavros_posix_sitl.launch  
 
