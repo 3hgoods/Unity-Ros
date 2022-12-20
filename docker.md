@@ -193,7 +193,14 @@ h1@h1:~$ docker inspect  jderobot/robotics-academy:latest
     }
 ]
 
-
-
-
 ```
+
+### 도커(docker) 이미지 보기
+- sudo docker ps   (현재 동작중인 도커)
+- sudo docker ps -a (스돕까지 포함한 도커)
+- sudo docker images ( 모든 이미지)
+- sudo docker rmi  [이미지 아이디] 
+
+
+
+
